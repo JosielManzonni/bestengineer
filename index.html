@@ -1,0 +1,1592 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Josiel Manzonni | Principal Software Engineer</title>
+
+    <meta
+      name="description"
+      content="Principal Software Engineer specializing in Backend Architecture, Android, Distributed Systems, Cloud, Payments and Technical Leadership."
+    />
+
+    <meta name="author" content="Josiel Manzonni" />
+    <meta
+      name="keywords"
+      content="Backend Engineer, Android Engineer, Principal Software Engineer, Staff Engineer, Java, Kotlin, Spring Boot, AWS, Kafka, Kubernetes, Samsung Wallet, Open Finance, Pix, Distributed Systems"
+    />
+
+    <meta
+      property="og:title"
+      content="Josiel Manzonni | Principal Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Building scalable backend platforms, Android applications and payment systems used by millions worldwide."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://josielmanzonni.github.io/" />
+
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            colors: {
+              // Swapping the soft indigo brand for a sharp terminal green
+              brand: {
+                400: "#4ade80",
+                500: "#22c55e",
+                600: "#16a34a",
+              },
+            },
+            boxShadow: {
+              glow: "0 0 20px rgba(34,197,94,.4)",
+              terminal: "4px 4px 0px rgba(34,197,94,0.3)",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        background-color: #f3f4f6;
+        color: #111827;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+      }
+
+      section {
+        scroll-margin-top: 90px;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(34, 197, 94, 0.5);
+        border-left: 4px solid #22c55e;
+        box-shadow: 4px 4px 0px rgba(34, 197, 94, 0.2);
+      }
+
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(34, 197, 94, 0.15) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(34, 197, 94, 0.15) 1px, transparent 1px);
+      }
+
+      .glass:hover {
+        border-color: rgba(34, 197, 94, 0.8);
+        box-shadow: 0 0 15px rgba(34, 197, 94, 0.1);
+      }
+
+.section-title {
+        @apply text-3xl md:text-5xl font-mono font-bold tracking-tighter mb-4 text-slate-900 dark:text-slate-900 dark:text-white;
+      }
+
+.section-title::before {
+        content: ">_ ";
+        color: #22c55e;
+      }
+
+.section-subtitle {
+        @apply text-slate-600 dark:text-slate-600 dark:text-slate-400 text-lg leading-8 max-w-3xl font-mono text-sm;
+      }
+
+      /* Matrix/Terminal green gradient */
+      .gradient-text {
+        background: linear-gradient(90deg, #4ade80, #22c55e, #10b981);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: "JetBrains Mono", monospace;
+      }
+
+/* Fixed Skill Chips to adapt to light/dark mode */
+      .skill-chip {
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        background: #ffffff; /* Light mode default */
+        color: #16a34a; /* Darker green for readable light mode */
+        font-family: "JetBrains Mono", monospace;
+        border-radius: 0 !important;
+      }
+
+      .dark .skill-chip {
+        background: #000000;
+        color: #4ade80;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #22c55e;
+      }
+      ::selection {
+        background: #22c55e;
+        color: #000;
+      }
+      .dark body {
+        background-color: #050505;
+        color: #d1d5db;
+      }
+
+      .dark .glass {
+        background: rgba(10, 10, 10, 0.8);
+        border-color: rgba(34, 197, 94, 0.3);
+        box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.02);
+      }
+
+      .dark .grid-bg {
+        background-image:
+          linear-gradient(rgba(34, 197, 94, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+      }
+    </style>
+  </head>
+
+  <body class="text-slate-800 dark:text-slate-200 overflow-x-hidden">
+    <!-- Background Decorations -->
+
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute w-[700px] h-[700px] hidden"></div>
+
+      <div class="absolute w-[650px] h-[650px] hidden"></div>
+
+      <div class="absolute inset-0 grid-bg opacity-40"></div>
+    </div>
+
+    <!-- Main Wrapper -->
+
+    <div class="relative">
+      <!-- ===================================================== -->
+      <!-- Navigation -->
+      <!-- ===================================================== -->
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-green-500/20 backdrop-blur-xl bg-white/90 dark:bg-[#050505]/90 transition-colors">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8 h-20">
+          
+          <a href="#hero" class="text-xl font-black tracking-tight text-black dark:text-slate-900 dark:text-white hover:text-green-500 transition">
+            Josiel<span class="text-green-500">.</span>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-8 text-sm font-mono">
+            <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">About</a>
+            <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">Skills</a>
+            <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">Experience</a>
+            <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">Projects</a>
+            <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-4">
+            
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="https://github.com/JosielManzonni" target="_blank" class="rounded-none border border-green-500/40 p-2 text-green-600 dark:text-green-500 hover:bg-green-500/10 transition">
+                  <i class="si si-github text-lg"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/josielmanzonni/" target="_blank" class="rounded-none bg-green-600 p-2 text-slate-900 dark:text-white hover:bg-green-500 transition">
+                  <i class="si si-linkedin text-lg"></i>
+                </a>
+                <a href="https://medium.com/@josiel.mazonni" target="_blank" class="rounded-none border border-green-500/40 p-2 text-green-600 dark:text-green-500 hover:bg-green-500/10 transition">
+                  <i class="si si-medium text-lg"></i>
+                </a>
+            </div>
+
+            <button id="themeToggle" class="rounded-none border border-green-500/40 p-2 text-green-600 dark:text-green-500 hover:bg-green-500/10 transition bg-transparent" aria-label="Toggle Dark Mode">
+              <svg id="themeIcon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </button>
+
+            <button id="menuButton" class="lg:hidden p-2 text-green-600 dark:text-green-500 hover:text-green-400 border border-transparent">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-green-500/20 bg-white dark:bg-[#050505]">
+          <div class="flex flex-col p-6 gap-5 font-mono text-sm">
+            <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-green-500">About</a>
+            <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-green-500">Skills</a>
+            <a href="#experience" class="text-gray-700 dark:text-gray-300 hover:text-green-500">Experience</a>
+            <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-green-500">Projects</a>
+            <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-green-500">Contact</a>
+
+            <hr class="border-green-500/20 my-2" />
+            
+            <div class="flex gap-4">
+              <a href="https://github.com/JosielManzonni" target="_blank" class="text-gray-700 dark:text-slate-600 dark:text-gray-400 hover:text-green-500"><i class="si si-github text-xl"></i></a>
+              <a href="https://www.linkedin.com/in/josielmanzonni/" target="_blank" class="text-green-600 hover:text-green-500"><i class="si si-linkedin text-xl"></i></a>
+              <a href="https://medium.com/@josiel.mazonni" target="_blank" class="text-gray-700 dark:text-slate-600 dark:text-gray-400 hover:text-green-500"><i class="si si-medium text-xl"></i></a>
+            </div>
+            </div>
+        </div>
+      </header>
+
+      <!-- ===================================================== -->
+      <!-- HERO -->
+      <!-- ===================================================== -->
+
+      <section id="hero" class="pt-36 lg:pt-48 pb-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+          <div class="animate-fade mb-12 lg:mb-20">
+            <span
+              class="inline-flex items-center border border-green-500/40 bg-black px-4 py-2 text-sm text-green-400 font-mono mb-8 rounded-none"
+            >
+              >_ Exceptional Software Engineer • Backend & Mobile Architect
+            </span>
+
+            <h1
+              class="text-5xl md:text-7xl font-mono font-bold tracking-tighter leading-tight text-slate-900 dark:text-white max-w-5xl"
+            >
+              Building
+              <span class="gradient-text">scalable software</span>
+              across backend platforms, mobile experiences and digital payments.
+            </h1>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+            <div class="animate-fade">
+              <p
+                class="text-xl text-slate-600 dark:text-gray-400 leading-9 max-w-2xl font-mono text-sm"
+              >
+                I'm <strong class="text-slate-900 dark:text-white">Josiel Manzonni</strong>, a
+                software engineer with 14+ years of experience designing and
+                delivering backend systems, Android applications and
+                cloud-native platforms. My work combines deep expertise in
+                <strong class="text-slate-900 dark:text-white"
+                  >distributed systems, mobile architecture, payment platforms,
+                  security and technical leadership</strong
+                >. I've contributed to products and platforms at
+                <strong class="text-slate-900 dark:text-white"
+                  >Samsung Research (SiDi), Motorola Mobility (Eldorado) and
+                  Pinterest</strong
+                >, helping teams build reliable experiences used by millions of
+                users.
+              </p>
+
+              <div class="mt-12 flex flex-wrap gap-5">
+                <a
+                  href="#experience"
+                  class="rounded-none px-7 py-4 bg-green-600 hover:bg-green-500 text-slate-900 dark:text-white font-bold transition font-mono border border-green-400"
+                >
+                  View Experience
+                </a>
+                <a
+                  href="https://github.com/JosielManzonni"
+                  target="_blank"
+                  class="rounded-none border border-green-500/40 text-green-400 hover:border-green-400 px-7 py-4 hover:bg-white/5 transition font-mono"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/josielmanzonni/"
+                  target="_blank"
+                  class="rounded-none border border-green-500/40 text-green-400 hover:border-green-400 px-7 py-4 hover:bg-white/5 transition font-mono"
+                >
+                  LinkedIn
+                </a>
+              </div>
+
+              <div
+                class="flex flex-wrap gap-x-10 lg:gap-x-16 gap-y-8 mt-16 border-t border-green-500/20 pt-8"
+              >
+                <div>
+                  <h3
+                    class="text-3xl lg:text-4xl font-mono font-bold text-green-400"
+                  >
+                    14+
+                  </h3>
+                  <p
+                    class="text-gray-500 mt-2 font-mono text-xs uppercase tracking-widest"
+                  >
+                    Years
+                  </p>
+                </div>
+                <div>
+                  <h3
+                    class="text-3xl lg:text-4xl font-mono font-bold text-green-400"
+                  >
+                    27+
+                  </h3>
+                  <p
+                    class="text-gray-500 mt-2 font-mono text-xs uppercase tracking-widest"
+                  >
+                    Countries
+                  </p>
+                </div>
+                <div>
+                  <h3
+                    class="text-3xl lg:text-4xl font-mono font-bold text-green-400"
+                  >
+                    Millions
+                  </h3>
+                  <p
+                    class="text-gray-500 mt-2 font-mono text-xs uppercase tracking-widest"
+                  >
+                    End Users
+                  </p>
+                </div>
+                <div>
+                  <h3
+                    class="text-3xl lg:text-4xl font-mono font-bold text-green-400"
+                  >
+                    R$11M+
+                  </h3>
+                  <p
+                    class="text-gray-500 mt-2 font-mono text-xs uppercase tracking-widest"
+                  >
+                    Impact
+                  </p>
+                </div>
+              </div>
+            </div>
+
+   <div class="relative pb-16 lg:pb-0 lg:mb-16 mt-12 lg:mt-0 z-10 w-full">
+              
+              <div class="glass rounded-none p-8 pb-28 w-full bg-white dark:bg-[#050505]">
+                <div class="flex items-center justify-between mb-8 border-b border-green-500/20 pb-4">
+                  <h3 class="font-bold text-xl font-mono text-slate-900 dark:text-slate-900 dark:text-white">
+                    Engineering Focus
+                  </h3>
+                  <span class="border border-green-500/30 text-green-600 dark:text-green-400 px-3 py-1 text-xs font-mono bg-slate-100 dark:bg-black">
+                    Staff/Principal
+                  </span>
+                </div>
+
+                <pre class="text-sm leading-8 overflow-auto text-slate-700 dark:text-gray-300 font-mono">
+class SoftwareEngineer {
+    expertise = [
+        "Backend Architecture",
+        "Android Engineering",
+        "Distributed Systems",
+        "Cloud Platforms",
+        "Payment Technology"
+    ]
+    // ... rest of your code block ...
+}
+                </pre>
+              </div>
+
+              <div class="absolute bottom-0 left-0 lg:bottom-4 lg:-left-8 z-20 glass bg-white dark:bg-[#050505] rounded-none p-6 max-w-[280px] shadow-terminal border border-green-500/50 border-l-4 border-l-green-500">
+                <p class="text-xs text-green-600 dark:text-green-400 font-mono uppercase tracking-widest">
+                  >_ Recent focus
+                </p>
+                <h4 class="font-bold mt-2 text-slate-900 dark:text-slate-900 dark:text-white font-mono text-lg">
+                  Samsung Wallet
+                </h4>
+                <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-600 dark:text-gray-400 font-mono">
+                  Backend architecture, Open Finance, Pix integration, payment
+                  orchestration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- ABOUT -->
+      <!-- ===================================================== -->
+
+      <section id="about" class="py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <span
+              class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold"
+            >
+              About Me
+            </span>
+
+            <h2 class="section-title mt-6">
+              Engineering products that scale, teams that deliver, and platforms
+              that last.
+            </h2>
+
+            <p class="section-subtitle mt-8">
+              My career has been built around solving difficult engineering
+              problems across backend platforms, Android applications,
+              distributed systems and payment infrastructure. I enjoy working
+              where architecture, scalability, product strategy and engineering
+              execution intersect.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-3 gap-10 mt-20">
+            <div class="lg:col-span-2">
+              <div class="glass rounded-none p-10">
+                <h3 class="text-2xl font-bold">Who I Am</h3>
+
+                <div class="mt-8 space-y-7 text-slate-600 dark:text-slate-400 leading-8">
+                  <p>
+                    I'm a software engineer with more than
+                    <strong class="text-slate-900 dark:text-white">
+                      14 years of professional experience
+                    </strong>
+
+                    building cloud-native platforms, Android applications,
+                    distributed systems and payment products.
+                  </p>
+
+                  <p>
+                    Throughout my career I've worked from low-level Android
+                    development to backend architecture, designing highly
+                    available services, event-driven systems, secure
+                    authentication mechanisms and resilient APIs used by
+                    millions of customers.
+                  </p>
+
+                  <p>
+                    My experience spans technical leadership, architecture
+                    definition, performance optimization, cloud migration,
+                    developer experience, observability, reliability engineering
+                    and security-first software design.
+                  </p>
+
+                  <p>
+                    While many engineers specialize exclusively in either
+                    backend or mobile, I've spent years building both. That dual
+                    perspective allows me to design end-to-end solutions,
+                    understanding every layer from Android UX to distributed
+                    microservices, payment orchestration and cloud
+                    infrastructure.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="glass rounded-none p-8 h-full">
+                <h3 class="text-xl font-bold">Core Strengths</h3>
+
+                <div class="mt-8 space-y-5">
+                  <div>
+                    <h4 class="font-semibold">Backend Architecture</h4>
+
+                    <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-7">
+                      Cloud-native, scalable, event-driven systems.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold">Android Engineering</h4>
+
+                    <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-7">
+                      Kotlin, Java, MVVM, MVI, Jetpack Compose, security, Wallet, NFC,
+                      performance.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold">Leadership</h4>
+
+                    <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-7">
+                      Technical strategy, architecture reviews, mentoring,
+                      engineering excellence.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold">Payments</h4>
+
+                    <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-7">
+                      Pix, Open Finance, NFC, Samsung Wallet, Visa, Mastercard.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- ENGINEERING PHILOSOPHY -->
+      <!-- ===================================================== -->
+
+      <section class="pb-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="glass rounded-[32px] p-12">
+            <div class="max-w-4xl">
+              <span
+                class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold"
+              >
+                Engineering Philosophy
+              </span>
+
+              <h2 class="text-4xl font-black mt-6">
+                Technology should enable business, not become its bottleneck.
+              </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 mt-16">
+              <div class="space-y-8">
+                <div>
+                  <h3 class="font-bold text-xl">
+                    Architecture before implementation
+                  </h3>
+
+                  <p class="mt-3 text-slate-600 dark:text-slate-400 leading-8">
+                    Strong systems begin with clear boundaries, scalable
+                    abstractions, well-defined ownership and operational
+                    simplicity.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 class="font-bold text-xl">
+                    Developer Experience matters
+                  </h3>
+
+                  <p class="mt-3 text-slate-600 dark:text-slate-400 leading-8">
+                    Great engineering organizations build internal platforms,
+                    automation, documentation and tooling that allow developers
+                    to move quickly without sacrificing quality.
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-8">
+                <div>
+                  <h3 class="font-bold text-xl">Reliability is a feature</h3>
+
+                  <p class="mt-3 text-slate-600 dark:text-slate-400 leading-8">
+                    Observability, resiliency, retries, idempotency, fault
+                    isolation and graceful degradation should be designed from
+                    day one.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 class="font-bold text-xl">
+                    Leadership through influence
+                  </h3>
+
+                  <p class="mt-3 text-slate-600 dark:text-slate-400 leading-8">
+                    The best technical leaders multiply the effectiveness of the
+                    people around them, creating environments where teams can
+                    build confidently and continuously improve.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- SKILLS -->
+      <!-- ===================================================== -->
+
+      <section id="skills" class="py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <span
+            class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold"
+          >
+            Core Technical Skills
+          </span>
+
+          <h2 class="section-title mt-6">
+            Full-stack engineering with backend-first expertise.
+          </h2>
+
+          <p class="section-subtitle mt-8">
+            Over the years I've specialized in backend architecture while
+            maintaining deep Android expertise, enabling me to design complete
+            end-to-end platforms.
+          </p>
+
+          <div class="grid lg:grid-cols-2 gap-8 mt-20">
+            <!-- Backend -->
+
+            <div class="glass rounded-none p-8 skill-chip">
+              <h3 class="text-2xl font-bold">Backend Engineering</h3>
+
+              <div class="flex flex-wrap gap-3 mt-8">
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Java</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Kotlin</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Python</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Spring Boot</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >FastAPI</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Django</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >REST</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >GraphQL</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Kafka</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Redis</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >RabbitMQ</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >PostgreSQL</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >MongoDB</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >DynamoDB</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >DDD</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >CQRS</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Saga</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Hexagonal Architecture</span
+                >
+              </div>
+            </div>
+
+            <!-- Android -->
+
+            <div class="glass rounded-none p-8 skill-chip">
+              <h3 class="text-2xl font-bold">Android Engineering</h3>
+
+              <div class="flex flex-wrap gap-3 mt-8">
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Kotlin</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Jetpack Compose</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >MVVM</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >MVI</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Coroutines</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Flow</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Room</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Hilt</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Koin</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Java</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Clean Architecture</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Play Feature Delivery</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >NFC</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Samsung Wallet</span
+                >
+                <span
+                  class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none"
+                  >Digital Wallet</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- PROFESSIONAL EXPERIENCE -->
+      <!-- ===================================================== -->
+
+      <section id="experience" class="py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <span
+            class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold"
+          >
+            Professional Experience
+          </span>
+
+          <h2 class="section-title mt-6">
+            Building products used by millions, leading engineering initiatives,
+            and delivering measurable business impact.
+          </h2>
+
+          <p class="section-subtitle mt-8">
+            My career combines deep backend expertise with advanced Android
+            engineering, enabling me to architect complete solutions—from cloud
+            infrastructure and distributed systems to secure mobile applications
+            powering payment experiences worldwide.
+          </p>
+
+          <div class="mt-20 space-y-12">
+            <!-- ================================================= -->
+            <!-- Samsung -->
+            <!-- ================================================= -->
+
+            <article class="experience-card glass rounded-none p-10">
+              <div
+                class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8"
+              >
+                <div>
+                  <div class="flex flex-wrap items-center gap-4">
+                    <span
+                      class="px-4 py-2 rounded-full bg-green-500/20 text-green-300 text-sm"
+                    >
+                      Most Recent
+                    </span>
+
+                    <span class="text-slate-500"> 2023 — 2026 </span>
+                  </div>
+
+                  <h3 class="text-3xl font-black mt-6">
+                    Samsung Research Brazil (SiDi)
+                  </h3>
+
+                  <p class="text-xl text-green-300 mt-2">
+                    Technical Lead • Staff Software Engineer
+                  </p>
+                </div>
+
+                <div class="lg:text-right">
+                  <div class="text-sm uppercase tracking-widest text-slate-500">
+                    Domains
+                  </div>
+
+                  <div class="mt-3 flex flex-wrap gap-2 lg:justify-end">
+                    <span
+                      class="px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                      >Samsung Wallet</span
+                    >
+                    <span
+                      class="px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                      >Backend</span
+                    >
+                    <span
+                      class="px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                      >Android</span
+                    >
+                    <span
+                      class="px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                      >Payments</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mission -->
+
+              <div class="mt-12">
+                <h4 class="font-bold text-lg">Mission</h4>
+
+                <p class="mt-4 text-slate-600 dark:text-slate-400 leading-8">
+                  Led engineering initiatives for Samsung Wallet, working across
+                  backend services and Android applications to deliver secure
+                  digital payment experiences. Focused on scalable architecture,
+                  financial integrations, mobile security, and reliability
+                  across LATAM, EMEA and MEA markets.
+                </p>
+              </div>
+
+              <!-- Highlights -->
+
+              <div class="grid lg:grid-cols-2 gap-10 mt-12">
+                <div>
+                  <h4 class="font-bold">Backend & Cloud</h4>
+
+                  <ul
+                    class="mt-5 space-y-4 text-slate-600 dark:text-slate-400 leading-8 list-disc ml-5"
+                  >
+                    <li>
+                      Designed and evolved backend services using Spring Boot,
+                      Kafka, Redis and AWS-based architectures.
+                    </li>
+
+                    <li>
+                      Built reliable payment workflows using event-driven
+                      architecture, idempotency patterns, and distributed system
+                      principles.
+                    </li>
+
+                    <li>
+                      Integrated financial capabilities including Open Finance
+                      and Pix ecosystems.
+                    </li>
+
+                    <li>
+                      Improved system reliability through observability,
+                      monitoring and operational improvements.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-bold">Android & Leadership</h4>
+
+                  <ul
+                    class="mt-5 space-y-4 text-slate-600 dark:text-slate-400 leading-8 list-disc ml-5"
+                  >
+                    <li>
+                      Designed Android solutions using Kotlin, modern
+                      architecture patterns and Jetpack technologies.
+                    </li>
+
+                    <li>
+                      Implemented secure authentication flows using FIDO2,
+                      Passkeys, Android Keystore and biometrics.
+                    </li>
+
+                    <li>
+                      Worked on wallet experiences involving payment flows,
+                      security and user experience.
+                    </li>
+
+                    <li>
+                      Provided technical direction, architecture reviews and
+                      engineering mentorship.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- ================================================= -->
+            <!-- Motorola -->
+            <!-- ================================================= -->
+
+            <article class="experience-card glass rounded-none p-10">
+              <div class="flex flex-col lg:flex-row justify-between gap-8">
+                <div>
+                  <h3 class="text-3xl font-black">Motorola Mobility</h3>
+
+                  <p class="text-xl text-green-300 mt-2">
+                    Software Engineer • Eldorado Research Institute
+                  </p>
+                </div>
+
+                <div class="text-slate-500">2021 — 2023</div>
+              </div>
+
+              <p class="mt-10 text-slate-600 dark:text-slate-400 leading-8">
+                At Motorola Mobility through Eldorado Research Institute, I
+                worked on Android-focused engineering initiatives, building
+                software experiences for mobile devices while collaborating with
+                platform, hardware and backend teams. My work involved
+                application architecture, performance optimization, integration
+                with device capabilities and improving engineering workflows.
+              </p>
+
+              <div class="grid lg:grid-cols-2 gap-10 mt-12">
+                <div>
+                  <h4 class="font-bold">Android Engineering</h4>
+
+                  <ul
+                    class="mt-5 list-disc ml-5 space-y-4 text-slate-600 dark:text-slate-400 leading-8"
+                  >
+                    <li>Built native Android features using Kotlin.</li>
+
+                    <li>
+                      Improved startup performance, memory utilization and
+                      application stability.
+                    </li>
+
+                    <li>Applied Clean Architecture and modular development.</li>
+
+                    <li>
+                      Collaborated with UX, QA, firmware and platform
+                      engineering teams.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-bold">Backend Contributions</h4>
+
+                  <ul
+                    class="mt-5 list-disc ml-5 space-y-4 text-slate-600 dark:text-slate-400 leading-8"
+                  >
+                    <li>Designed APIs supporting Android applications.</li>
+
+                    <li>
+                      Developed backend services consumed by mobile clients.
+                    </li>
+
+                    <li>Automated deployments through CI/CD pipelines.</li>
+
+                    <li>
+                      Improved engineering productivity with automation and
+                      development tooling.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- ================================================= -->
+            <!-- Pinterest -->
+            <!-- ================================================= -->
+
+            <article class="experience-card glass rounded-none p-10">
+              <div class="flex flex-col lg:flex-row justify-between gap-8">
+                <div>
+                  <h3 class="text-3xl font-black">Pinterest</h3>
+
+                  <p class="text-xl text-green-300 mt-2">Software Engineer</p>
+                </div>
+
+                <div class="text-slate-500">Global Engineering</div>
+              </div>
+
+              <p class="mt-10 text-slate-600 dark:text-slate-400 leading-8">
+                At Pinterest, I contributed to engineering efforts within a
+                large-scale consumer platform, working with mobile and backend
+                technologies to deliver reliable user experiences. The
+                experience strengthened my understanding of high-scale product
+                development, experimentation, performance optimization and
+                engineering practices used by global teams.
+              </p>
+
+              <div class="grid lg:grid-cols-2 gap-10 mt-12">
+                <div>
+                  <h4 class="font-bold">Mobile</h4>
+
+                  <ul
+                    class="mt-5 list-disc ml-5 space-y-4 text-slate-600 dark:text-slate-400 leading-8"
+                  >
+                    <li>
+                      Developed Android features focused on user experience and
+                      performance.
+                    </li>
+
+                    <li>
+                      Collaborated closely with product, design and platform
+                      teams.
+                    </li>
+
+                    <li>
+                      Improved application responsiveness through profiling and
+                      optimization.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-bold">Backend & Platform</h4>
+
+                  <ul
+                    class="mt-5 list-disc ml-5 space-y-4 text-slate-600 dark:text-slate-400 leading-8"
+                  >
+                    <li>
+                      Built backend services supporting experimentation and
+                      platform capabilities.
+                    </li>
+
+                    <li>
+                      Worked with APIs, scalable services and distributed
+                      infrastructure.
+                    </li>
+
+                    <li>
+                      Participated in engineering reviews, testing strategies
+                      and continuous delivery.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- PROJECTS -->
+      <!-- ===================================================== -->
+
+      <section id="projects" class="py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <span
+            class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold"
+          >
+            Featured Projects
+          </span>
+
+          <h2 class="section-title mt-6">
+            Systems designed for scale, security and real-world impact.
+          </h2>
+
+          <p class="section-subtitle mt-8">
+            Selected engineering initiatives covering payments, cloud platforms,
+            mobile applications, authentication and distributed architectures.
+          </p>
+
+          <div class="grid lg:grid-cols-2 gap-8 mt-20">
+            <!-- Samsung Wallet -->
+
+            <article class="project-card glass rounded-none p-10">
+              <div class="flex items-start justify-between">
+                <div>
+                  <span class="text-green-400 text-sm"> Payment Platform </span>
+
+                  <h3 class="text-2xl font-black mt-3">
+                    Samsung Wallet Platform
+                  </h3>
+                </div>
+
+                <div class="text-3xl">💳</div>
+              </div>
+
+              <p class="mt-8 text-slate-600 dark:text-slate-400 leading-8">
+                Architecture and delivery of Samsung Wallet capabilities across
+                multiple regions, combining Android security, backend
+                microservices, payment orchestration and financial integrations.
+              </p>
+
+              <div class="mt-8">
+                <h4 class="font-semibold">Engineering Highlights</h4>
+
+                <ul class="mt-4 space-y-3 text-slate-600 dark:text-slate-400 list-disc ml-5">
+                  <li>
+                    Backend services built with scalable cloud-native patterns.
+                  </li>
+
+                  <li>
+                    Android security using FIDO2, Passkeys, Android Keystore and
+                    biometrics.
+                  </li>
+
+                  <li>
+                    Payment workflows designed with reliability, idempotency and
+                    observability.
+                  </li>
+
+                  <li>
+                    Integration with financial ecosystems including Pix and Open
+                    Finance.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex flex-wrap gap-3 mt-8">
+                <span
+                  class="skill-chip px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                >
+                  Kotlin
+                </span>
+
+                <span
+                  class="skill-chip px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                >
+                  Spring Boot
+                </span>
+
+                <span
+                  class="skill-chip px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                >
+                  Kafka
+                </span>
+
+                <span
+                  class="skill-chip px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                >
+                  AWS
+                </span>
+              </div>
+            </article>
+
+            <!-- Open Finance -->
+
+            <article class="project-card glass rounded-none p-10">
+              <div class="flex items-start justify-between">
+                <div>
+                  <span class="text-green-400 text-sm">
+                    Financial Infrastructure
+                  </span>
+
+                  <h3 class="text-2xl font-black mt-3">
+                    Open Finance & Pix Ecosystem
+                  </h3>
+                </div>
+
+                <div class="text-3xl">🚀</div>
+              </div>
+
+              <p class="mt-8 text-slate-600 dark:text-slate-400 leading-8">
+                Designed and evolved financial services enabling secure
+                transactions, account connectivity and payment experiences
+                within the Brazilian Open Finance ecosystem.
+              </p>
+
+              <div class="mt-8">
+                <h4 class="font-semibold">Architecture Concepts</h4>
+
+                <ul class="mt-4 space-y-3 text-slate-600 dark:text-slate-400 list-disc ml-5">
+                  <li>Event-driven architecture.</li>
+
+                  <li>Distributed transaction management.</li>
+
+                  <li>Idempotent payment processing.</li>
+
+                  <li>Resilient APIs and integrations.</li>
+
+                  <li>Monitoring and operational visibility.</li>
+                </ul>
+              </div>
+
+              <div class="flex flex-wrap gap-3 mt-8">
+                <span
+                  class="skill-chip px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                >
+                  Java
+                </span>
+
+                <span
+                  class="skill-chip px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                >
+                  Kafka
+                </span>
+
+                <span
+                  class="skill-chip px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                >
+                  Redis
+                </span>
+
+                <span
+                  class="skill-chip px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm"
+                >
+                  Microservices
+                </span>
+              </div>
+            </article>
+
+            <!-- Authentication -->
+
+            <article class="project-card glass rounded-none p-10">
+              <div class="flex items-start justify-between">
+                <div>
+                  <span class="text-green-400 text-sm">
+                    Identity & Security
+                  </span>
+
+                  <h3 class="text-2xl font-black mt-3">
+                    Secure Authentication Platform
+                  </h3>
+                </div>
+
+                <div class="text-3xl">🔐</div>
+              </div>
+
+              <p class="mt-8 text-slate-600 dark:text-slate-400 leading-8">
+                Implemented modern authentication approaches focused on
+                passwordless security, device trust and cryptographic identity.
+              </p>
+
+              <ul class="mt-8 space-y-3 text-slate-600 dark:text-slate-400 list-disc ml-5">
+                <li>FIDO2 and WebAuthn integration.</li>
+
+                <li>Passkeys architecture.</li>
+
+                <li>Android Keystore security.</li>
+
+                <li>Biometric authentication flows.</li>
+
+                <li>Secure communication patterns.</li>
+              </ul>
+            </article>
+
+            <!-- Distributed Systems -->
+
+            <article class="project-card glass rounded-none p-10">
+              <div class="flex items-start justify-between">
+                <div>
+                  <span class="text-green-400 text-sm">
+                    Platform Engineering
+                  </span>
+
+                  <h3 class="text-2xl font-black mt-3">
+                    Distributed Systems Architecture
+                  </h3>
+                </div>
+
+                <div class="text-3xl">☁️</div>
+              </div>
+
+              <p class="mt-8 text-slate-600 dark:text-slate-400 leading-8">
+                Designed backend architectures focused on availability,
+                scalability and operational excellence.
+              </p>
+
+              <ul class="mt-8 space-y-3 text-slate-600 dark:text-slate-400 list-disc ml-5">
+                <li>Microservices architecture.</li>
+
+                <li>Event streaming with Kafka.</li>
+
+                <li>Kubernetes deployments.</li>
+
+                <li>
+                  Observability with metrics, logs and distributed tracing.
+                </li>
+
+                <li>
+                  Reliability patterns: retries, circuit breakers, dead-letter
+                  queues.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ===================================================== -->
+      <!-- IMPACT -->
+      <!-- ===================================================== -->
+
+      <section class="py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="glass rounded-[32px] p-12">
+            <div class="grid lg:grid-cols-3 gap-10">
+              <div>
+                <span
+                  class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold"
+                >
+                  Engineering Impact
+                </span>
+
+                <h2 class="text-4xl font-black mt-6">
+                  Building technology that creates measurable outcomes.
+                </h2>
+              </div>
+
+              <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+                <div class="rounded-none bg-slate-900/50 p-6">
+                  <h3 class="text-3xl font-black gradient-text">14+</h3>
+
+                  <p class="mt-3 text-slate-600 dark:text-slate-400">
+                    Years designing and delivering production software.
+                  </p>
+                </div>
+
+                <div class="rounded-none bg-slate-900/50 p-6">
+                  <h3 class="text-3xl font-black gradient-text">Global</h3>
+
+                  <p class="mt-3 text-slate-600 dark:text-slate-400">
+                    Experience collaborating across Brazil, South Korea, LATAM,
+                    EMEA and MEA.
+                  </p>
+                </div>
+
+                <div class="rounded-none bg-slate-900/50 p-6">
+                  <h3 class="text-3xl font-black gradient-text">Millions</h3>
+
+                  <p class="mt-3 text-slate-600 dark:text-slate-400">
+                    Users impacted through payment platforms, wallets and mobile
+                    products.
+                  </p>
+                </div>
+
+                <div class="rounded-none bg-slate-900/50 p-6">
+                  <h3 class="text-3xl font-black gradient-text">R$11M+</h3>
+
+                  <p class="mt-3 text-slate-600 dark:text-slate-400">
+                    Monthly business impact generated through Open Finance
+                    initiatives.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- WRITING -->
+      <!-- ===================================================== -->
+
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div
+            class="glass rounded-none p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8"
+          >
+            <div>
+              <span
+                class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold"
+              >
+                Knowledge Sharing
+              </span>
+
+              <h2 class="text-3xl font-black mt-4">
+                Writing about engineering, architecture and technology.
+              </h2>
+
+              <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl leading-8">
+                Sharing experiences about backend systems, mobile engineering,
+                architecture decisions, distributed systems and software
+                development.
+              </p>
+            </div>
+
+            <a
+              href="https://medium.com/@josiel.mazonni"
+              target="_blank"
+              class="inline-flex justify-center rounded-none bg-green-600 px-8 py-4 hover:bg-green-500 transition"
+            >
+              Read Articles
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- CONTACT -->
+      <!-- ===================================================== -->
+
+      <section id="contact" class="py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto">
+            <span
+              class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold"
+            >
+              Contact
+            </span>
+
+            <h2 class="text-5xl font-black mt-6">
+              Let's build something impactful.
+            </h2>
+
+            <p class="mt-8 text-xl text-slate-600 dark:text-slate-400 leading-8">
+              I'm interested in challenging engineering problems, architecture
+              discussions, and opportunities where technology can create
+              meaningful impact.
+            </p>
+
+            <div class="hidden lg:flex items-center justify-center gap-4">
+              <a
+                href="https://github.com/JosielManzonni"
+                target="_blank"
+                class="rounded-none border border-white/10 p-3 hover:bg-white/5 transition flex items-center"
+              >
+                <i class="si si-github text-xl"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/josielmanzonni/"
+                target="_blank"
+                class="rounded-none bg-green-600 p-3 hover:bg-green-500 transition flex items-center"
+              >
+                <i class="si si-linkedin text-xl"></i>
+              </a>
+              <a
+                href="https://medium.com/@josiel.mazonni"
+                target="_blank"
+                class="rounded-none border border-white/10 p-3 hover:bg-white/5 transition flex items-center"
+              >
+                <i class="si si-medium text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================== -->
+      <!-- FOOTER -->
+      <!-- ===================================================== -->
+
+      <footer class="border-t border-white/5 py-10">
+        <div
+          class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between gap-6 text-sm text-slate-500"
+        >
+          <p>© 2026 Josiel Manzonni. Built with passion for engineering.</p>
+
+          <p>
+            Exceptional Software Engineer • Backend Architecture • Android
+            Engineering • Distributed Systems
+          </p>
+        </div>
+      </footer>
+      <!-- ===================================================== -->
+      <!-- JAVASCRIPT -->
+      <!-- ===================================================== -->
+
+      <script>
+        /**
+         * Mobile navigation
+         */
+
+        const menuButton = document.getElementById("menuButton");
+
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        if (menuButton) {
+          menuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+
+        /**
+         * Close mobile menu after navigation
+         */
+
+        document.querySelectorAll("#mobileMenu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+
+        /**
+         * Reveal animations
+         */
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-fade");
+
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.15,
+          },
+        );
+
+        document
+          .querySelectorAll("section article, section .glass")
+          .forEach((element) => {
+            observer.observe(element);
+          });
+
+        /**
+         * Dynamic year
+         */
+
+        const year = new Date().getFullYear();
+
+        document
+          .querySelector("footer p")
+          ?.replaceChildren(
+            `© ${year} Josiel Manzonni. Built with passion for engineering.`,
+          );
+      </script>
+      <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlElement = document.documentElement;
+
+    const sunIcon = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />';
+    const moonIcon = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />';
+
+    // Check local storage or system preference on load
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        htmlElement.classList.add('dark');
+        themeIcon.innerHTML = sunIcon;
+    } else {
+        htmlElement.classList.remove('dark');
+        themeIcon.innerHTML = moonIcon;
+    }
+
+    // Toggle logic
+    themeToggle.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+        if (htmlElement.classList.contains('dark')) {
+            localStorage.theme = 'dark';
+            themeIcon.innerHTML = sunIcon;
+        } else {
+            localStorage.theme = 'light';
+            themeIcon.innerHTML = moonIcon;
+        }
+    });
+</script>
+    </div>
+  </body>
+</html>
