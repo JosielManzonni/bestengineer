@@ -27,16 +27,31 @@ section {
 }
 
 .section-title {
-  @apply text-3xl md:text-5xl font-mono font-bold tracking-tighter mb-4 text-slate-900 dark:text-white;
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 3rem; /* md:text-5xl */
+    line-height: 1;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 2rem; /* leading-8 */
+  max-width: 48rem; /* max-w-3xl */
+  font-family: "JetBrains Mono", monospace;
 }
 
 .section-title::before {
   content: ">_ ";
   color: #22c55e;
-}
-
-.section-subtitle {
-  @apply text-slate-600 dark:text-slate-400 text-lg leading-8 max-w-3xl font-mono text-sm;
 }
 
 .gradient-text {
