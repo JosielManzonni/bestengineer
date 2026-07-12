@@ -1,0 +1,90 @@
+body {
+  background-color: #f3f4f6;
+  color: #111827;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  border-left: 4px solid #22c55e;
+  box-shadow: 4px 4px 0px rgba(34, 197, 94, 0.2);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(34, 197, 94, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.15) 1px, transparent 1px);
+}
+
+.glass:hover {
+  border-color: rgba(34, 197, 94, 0.8);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.1);
+}
+
+.section-title {
+  @apply text-3xl md:text-5xl font-mono font-bold tracking-tighter mb-4 text-slate-900 dark:text-white;
+}
+
+.section-title::before {
+  content: ">_ ";
+  color: #22c55e;
+}
+
+.section-subtitle {
+  @apply text-slate-600 dark:text-slate-400 text-lg leading-8 max-w-3xl font-mono text-sm;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #4ade80, #22c55e, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.skill-chip {
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: #ffffff;
+  color: #16a34a;
+  font-family: "JetBrains Mono", monospace;
+  border-radius: 0 !important;
+}
+
+.dark .skill-chip {
+  background: #000000;
+  color: #4ade80;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+}
+
+::selection {
+  background: #22c55e;
+  color: #000;
+}
+
+.dark body {
+  background-color: #050505;
+  color: #d1d5db;
+}
+
+.dark .glass {
+  background: rgba(10, 10, 10, 0.8);
+  border-color: rgba(34, 197, 94, 0.3);
+  box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.02);
+}
+
+.dark .grid-bg {
+  background-image:
+    linear-gradient(rgba(34, 197, 94, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.05) 1px, transparent 1px);
+}

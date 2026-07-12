@@ -1,0 +1,29 @@
+{
+  "eyebrow": "About Me",
+  "title": "Engineering products that scale, teams that deliver, and platforms that last.",
+  "description": "My career has been built around solving difficult engineering problems across backend platforms, Android applications, distributed systems and payment infrastructure. I enjoy working where architecture, scalability, product strategy and engineering execution intersect.",
+  "who_i_am_title": "Who I Am",
+  "who_i_am_paragraphs": [
+    "I'm a software engineer with more than 14 years of professional experience building cloud-native platforms, Android applications, distributed systems and payment products.",
+    "Throughout my career I've worked from low-level Android development to backend architecture, designing highly available services, event-driven systems, secure authentication mechanisms and resilient APIs used by millions of customers.",
+    "My experience spans technical leadership, architecture definition, performance optimization, cloud migration, developer experience, observability, reliability engineering and security-first software design.",
+    "While many engineers specialize exclusively in either backend or mobile, I've spent years building both. That dual perspective allows me to design end-to-end solutions, understanding every layer from Android UX to distributed microservices, payment orchestration and cloud infrastructure."
+  ],
+  "strengths_title": "Core Strengths",
+  "strengths": [
+    {"title": "Backend Architecture", "description": "Cloud-native, scalable, event-driven systems."},
+    {"title": "Android Engineering", "description": "Kotlin, Java, MVVM, MVI, Jetpack Compose, security, Wallet, NFC, performance."},
+    {"title": "Leadership", "description": "Technical strategy, architecture reviews, mentoring, engineering excellence."},
+    {"title": "Payments", "description": "Pix, Open Finance, NFC, Samsung Wallet, Visa, Mastercard."}
+  ],
+  "philosophy": {
+    "eyebrow": "Engineering Philosophy",
+    "title": "Technology should enable business, not become its bottleneck.",
+    "items": [
+      {"title": "Architecture before implementation", "description": "Strong systems begin with clear boundaries, scalable abstractions, well-defined ownership and operational simplicity."},
+      {"title": "Developer Experience matters", "description": "Great engineering organizations build internal platforms, automation, documentation and tooling that allow developers to move quickly without sacrificing quality."},
+      {"title": "Reliability is a feature", "description": "Observability, resiliency, retries, idempotency, fault isolation and graceful degradation should be designed from day one."},
+      {"title": "Leadership through influence", "description": "The best technical leaders multiply the effectiveness of the people around them, creating environments where teams can build confidently and continuously improve."}
+    ]
+  }
+}

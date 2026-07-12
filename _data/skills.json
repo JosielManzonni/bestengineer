@@ -1,0 +1,13 @@
+{
+  "eyebrow": "Core Technical Skills",
+  "title": "Full-stack engineering with backend-first expertise.",
+  "description": "Over the years I've specialized in backend architecture while maintaining deep Android expertise, enabling me to design complete end-to-end platforms.",
+  "backend": {
+    "title": "Backend Engineering",
+    "skills": ["Java", "Kotlin", "Python", "Spring Boot", "FastAPI", "Django", "REST", "GraphQL", "Kafka", "Redis", "RabbitMQ", "PostgreSQL", "MongoDB", "DynamoDB", "DDD", "CQRS", "Saga", "Hexagonal Architecture"]
+  },
+  "android": {
+    "title": "Android Engineering",
+    "skills": ["Kotlin", "Jetpack Compose", "MVVM", "MVI", "Coroutines", "Flow", "Room", "Hilt", "Koin", "Java", "Clean Architecture", "Play Feature Delivery", "NFC", "Samsung Wallet", "Digital Wallet"]
+  }
+}

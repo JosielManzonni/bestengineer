@@ -1,0 +1,31 @@
+<section id="skills" class="py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <span class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold">{{ site.data.skills.eyebrow }}</span>
+
+    <h2 class="section-title mt-6">{{ site.data.skills.title }}</h2>
+
+    <p class="section-subtitle mt-8">{{ site.data.skills.description }}</p>
+
+    <div class="grid lg:grid-cols-2 gap-8 mt-20">
+      <div class="glass rounded-none p-8 skill-chip">
+        <h3 class="text-2xl font-bold">{{ site.data.skills.backend.title }}</h3>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+          {% for skill in site.data.skills.backend.skills %}
+          <span class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="glass rounded-none p-8 skill-chip">
+        <h3 class="text-2xl font-bold">{{ site.data.skills.android.title }}</h3>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+          {% for skill in site.data.skills.android.skills %}
+          <span class="px-4 py-2 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+{
+  "hero": [
+    {"value": "14+", "label": "Years"},
+    {"value": "27+", "label": "Countries"},
+    {"value": "Millions", "label": "End Users"},
+    {"value": "R$11M+", "label": "Impact"}
+  ],
+  "impact": [
+    {"value": "14+", "description": "Years designing and delivering production software."},
+    {"value": "Global", "description": "Experience collaborating across Brazil, South Korea, LATAM, EMEA and MEA."},
+    {"value": "Millions", "description": "Users impacted through payment platforms, wallets and mobile products."},
+    {"value": "R$11M+", "description": "Monthly business impact generated through Open Finance initiatives."}
+  ]
+}

@@ -1,0 +1,45 @@
+<section id="projects" class="py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <span class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold">Featured Projects</span>
+
+    <h2 class="section-title mt-6">Systems designed for scale, security and real-world impact.</h2>
+
+    <p class="section-subtitle mt-8">Selected engineering initiatives covering payments, cloud platforms, mobile applications, authentication and distributed architectures.</p>
+
+    <div class="grid lg:grid-cols-2 gap-8 mt-20">
+      {% for project in site.data.projects %}
+      <article class="project-card glass rounded-none p-10">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="text-green-400 text-sm">{{ project.tag }}</span>
+            <h3 class="text-2xl font-black mt-3">{{ project.title }}</h3>
+          </div>
+          <div class="text-3xl">{{ project.emoji }}</div>
+        </div>
+
+        <p class="mt-8 text-slate-600 dark:text-slate-400 leading-8">{{ project.description }}</p>
+
+        <div class="mt-8">
+          {% if project.highlights_title %}
+          <h4 class="font-semibold">{{ project.highlights_title }}</h4>
+          {% endif %}
+
+          <ul class="mt-4 space-y-3 text-slate-600 dark:text-slate-400 list-disc ml-5">
+            {% for highlight in project.highlights %}
+            <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        {% if project.skills.size > 0 %}
+        <div class="flex flex-wrap gap-3 mt-8">
+          {% for skill in project.skills %}
+          <span class="skill-chip px-3 py-1 rounded-full bg-slate-100 dark:bg-black border border-green-500/40 text-green-600 dark:text-green-400 font-mono text-xs rounded-none text-sm">{{ skill }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

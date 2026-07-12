@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="author" content="{{ site.title }}" />
+    <meta name="keywords" content="Backend Engineer, Android Engineer, Principal Software Engineer, Staff Engineer, Java, Kotlin, Spring Boot, AWS, Kafka, Kubernetes, Samsung Wallet, Open Finance, Pix, Distributed Systems" />
+    <meta property="og:title" content="{{ site.title }} | Principal Software Engineer" />
+    <meta property="og:description" content="Building scalable backend platforms, Android applications and payment systems used by millions worldwide." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/5741930?v=4" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            colors: {
+              brand: {
+                400: "#4ade80",
+                500: "#22c55e",
+                600: "#16a34a",
+              },
+            },
+            boxShadow: {
+              glow: "0 0 20px rgba(34,197,94,.4)",
+              terminal: "4px 4px 0px rgba(34,197,94,0.3)",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  </head>
+  <body class="text-slate-800 dark:text-slate-200 overflow-x-hidden">
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute w-[700px] h-[700px] hidden"></div>
+      <div class="absolute w-[650px] h-[650px] hidden"></div>
+      <div class="absolute inset-0 grid-bg opacity-40"></div>
+    </div>
+
+    <div class="relative">
+      {% include header.html %}
+      {{ content }}
+      {% include footer.html %}
+    </div>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>

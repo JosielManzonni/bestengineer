@@ -1,0 +1,84 @@
+[
+  {
+    "company": "Samsung Research Brazil (SiDi)",
+    "role": "Technical Lead • Staff Software Engineer",
+    "period": "2023 — 2026",
+    "badge": "Most Recent",
+    "domains": ["Samsung Wallet", "Backend", "Android", "Payments"],
+    "mission": "Led engineering initiatives for Samsung Wallet, working across backend services and Android applications to deliver secure digital payment experiences. Focused on scalable architecture, financial integrations, mobile security, and reliability across LATAM, EMEA and MEA markets.",
+    "highlights": [
+      {
+        "title": "Backend & Cloud",
+        "items": [
+          "Designed and evolved backend services using Spring Boot, Kafka, Redis and AWS-based architectures.",
+          "Built reliable payment workflows using event-driven architecture, idempotency patterns, and distributed system principles.",
+          "Integrated financial capabilities including Open Finance and Pix ecosystems.",
+          "Improved system reliability through observability, monitoring and operational improvements."
+        ]
+      },
+      {
+        "title": "Android & Leadership",
+        "items": [
+          "Designed Android solutions using Kotlin, modern architecture patterns and Jetpack technologies.",
+          "Implemented secure authentication flows using FIDO2, Passkeys, Android Keystore and biometrics.",
+          "Worked on wallet experiences involving payment flows, security and user experience.",
+          "Provided technical direction, architecture reviews and engineering mentorship."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Motorola Mobility",
+    "role": "Software Engineer • Eldorado Research Institute",
+    "period": "2021 — 2023",
+    "badge": null,
+    "domains": [],
+    "mission": "At Motorola Mobility through Eldorado Research Institute, I worked on Android-focused engineering initiatives, building software experiences for mobile devices while collaborating with platform, hardware and backend teams. My work involved application architecture, performance optimization, integration with device capabilities and improving engineering workflows.",
+    "highlights": [
+      {
+        "title": "Android Engineering",
+        "items": [
+          "Built native Android features using Kotlin.",
+          "Improved startup performance, memory utilization and application stability.",
+          "Applied Clean Architecture and modular development.",
+          "Collaborated with UX, QA, firmware and platform engineering teams."
+        ]
+      },
+      {
+        "title": "Backend Contributions",
+        "items": [
+          "Designed APIs supporting Android applications.",
+          "Developed backend services consumed by mobile clients.",
+          "Automated deployments through CI/CD pipelines.",
+          "Improved engineering productivity with automation and development tooling."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Pinterest",
+    "role": "Software Engineer",
+    "period": "Global Engineering",
+    "badge": null,
+    "domains": [],
+    "mission": "At Pinterest, I contributed to engineering efforts within a large-scale consumer platform, working with mobile and backend technologies to deliver reliable user experiences. The experience strengthened my understanding of high-scale product development, experimentation, performance optimization and engineering practices used by global teams.",
+    "highlights": [
+      {
+        "title": "Mobile",
+        "items": [
+          "Developed Android features focused on user experience and performance.",
+          "Collaborated closely with product, design and platform teams.",
+          "Improved application responsiveness through profiling and optimization."
+        ]
+      },
+      {
+        "title": "Backend & Platform",
+        "items": [
+          "Built backend services supporting experimentation and platform capabilities.",
+          "Worked with APIs, scalable services and distributed infrastructure.",
+          "Participated in engineering reviews, testing strategies and continuous delivery."
+        ]
+      }
+    ]
+  }
+]

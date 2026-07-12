@@ -1,0 +1,59 @@
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-green-500/20 backdrop-blur-xl bg-white/90 dark:bg-[#050505]/90 transition-colors">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-8 h-20">
+    <a href="#hero" class="text-xl font-black tracking-tight text-black dark:text-slate-900 dark:text-white hover:text-green-500 transition">
+      {{ site.data.intro.name }}<span class="text-green-500">.</span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-mono">
+      <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">About</a>
+      <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">Skills</a>
+      <a href="#experience" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">Experience</a>
+      <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">Projects</a>
+      <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-green-500 dark:hover:text-green-400 transition">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="{{ site.data.socials.github }}" target="_blank" class="rounded-none border border-green-500/40 p-2 text-green-600 dark:text-green-500 hover:bg-green-500/10 transition">
+          <i class="si si-github text-lg"></i>
+        </a>
+        <a href="{{ site.data.socials.linkedin }}" target="_blank" class="rounded-none bg-green-600 p-2 text-slate-900 dark:text-white hover:bg-green-500 transition">
+          <i class="si si-linkedin text-lg"></i>
+        </a>
+        <a href="{{ site.data.socials.medium }}" target="_blank" class="rounded-none border border-green-500/40 p-2 text-green-600 dark:text-green-500 hover:bg-green-500/10 transition">
+          <i class="si si-medium text-lg"></i>
+        </a>
+      </div>
+
+      <button id="themeToggle" class="rounded-none border border-green-500/40 p-2 text-green-600 dark:text-green-500 hover:bg-green-500/10 transition bg-transparent" aria-label="Toggle Dark Mode">
+        <svg id="themeIcon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      </button>
+
+      <button id="menuButton" class="lg:hidden p-2 text-green-600 dark:text-green-500 hover:text-green-400 border border-transparent">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-green-500/20 bg-white dark:bg-[#050505]">
+    <div class="flex flex-col p-6 gap-5 font-mono text-sm">
+      <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-green-500">About</a>
+      <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-green-500">Skills</a>
+      <a href="#experience" class="text-gray-700 dark:text-gray-300 hover:text-green-500">Experience</a>
+      <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-green-500">Projects</a>
+      <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-green-500">Contact</a>
+
+      <hr class="border-green-500/20 my-2" />
+
+      <div class="flex gap-4">
+        <a href="{{ site.data.socials.github }}" target="_blank" class="text-gray-700 dark:text-slate-600 dark:text-gray-400 hover:text-green-500"><i class="si si-github text-xl"></i></a>
+        <a href="{{ site.data.socials.linkedin }}" target="_blank" class="text-green-600 hover:text-green-500"><i class="si si-linkedin text-xl"></i></a>
+        <a href="{{ site.data.socials.medium }}" target="_blank" class="text-gray-700 dark:text-slate-600 dark:text-gray-400 hover:text-green-500"><i class="si si-medium text-xl"></i></a>
+      </div>
+    </div>
+  </div>
+</header>

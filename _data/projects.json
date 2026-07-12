@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Samsung Wallet Platform",
+    "tag": "Payment Platform",
+    "emoji": "💳",
+    "description": "Architecture and delivery of Samsung Wallet capabilities across multiple regions, combining Android security, backend microservices, payment orchestration and financial integrations.",
+    "highlights_title": "Engineering Highlights",
+    "highlights": [
+      "Backend services built with scalable cloud-native patterns.",
+      "Android security using FIDO2, Passkeys, Android Keystore and biometrics.",
+      "Payment workflows designed with reliability, idempotency and observability.",
+      "Integration with financial ecosystems including Pix and Open Finance."
+    ],
+    "skills": ["Kotlin", "Spring Boot", "Kafka", "AWS"]
+  },
+  {
+    "title": "Open Finance & Pix Ecosystem",
+    "tag": "Financial Infrastructure",
+    "emoji": "🚀",
+    "description": "Designed and evolved financial services enabling secure transactions, account connectivity and payment experiences within the Brazilian Open Finance ecosystem.",
+    "highlights_title": "Architecture Concepts",
+    "highlights": [
+      "Event-driven architecture.",
+      "Distributed transaction management.",
+      "Idempotent payment processing.",
+      "Resilient APIs and integrations.",
+      "Monitoring and operational visibility."
+    ],
+    "skills": ["Java", "Kafka", "Redis", "Microservices"]
+  },
+  {
+    "title": "Secure Authentication Platform",
+    "tag": "Identity & Security",
+    "emoji": "🔐",
+    "description": "Implemented modern authentication approaches focused on passwordless security, device trust and cryptographic identity.",
+    "highlights_title": null,
+    "highlights": [
+      "FIDO2 and WebAuthn integration.",
+      "Passkeys architecture.",
+      "Android Keystore security.",
+      "Biometric authentication flows.",
+      "Secure communication patterns."
+    ],
+    "skills": []
+  },
+  {
+    "title": "Distributed Systems Architecture",
+    "tag": "Platform Engineering",
+    "emoji": "☁️",
+    "description": "Designed backend architectures focused on availability, scalability and operational excellence.",
+    "highlights_title": null,
+    "highlights": [
+      "Microservices architecture.",
+      "Event streaming with Kafka.",
+      "Kubernetes deployments.",
+      "Observability with metrics, logs and distributed tracing.",
+      "Reliability patterns: retries, circuit breakers, dead-letter queues."
+    ],
+    "skills": []
+  }
+]

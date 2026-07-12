@@ -1,0 +1,71 @@
+<section id="about" class="py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-3xl">
+      <span class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold">{{ site.data.about.eyebrow }}</span>
+
+      <h2 class="section-title mt-6">{{ site.data.about.title }}</h2>
+
+      <p class="section-subtitle mt-8">{{ site.data.about.description }}</p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-10 mt-20">
+      <div class="lg:col-span-2">
+        <div class="glass rounded-none p-10">
+          <h3 class="text-2xl font-bold">{{ site.data.about.who_i_am_title }}</h3>
+
+          <div class="mt-8 space-y-7 text-slate-600 dark:text-slate-400 leading-8">
+            {% for paragraph in site.data.about.who_i_am_paragraphs %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="glass rounded-none p-8 h-full">
+          <h3 class="text-xl font-bold">{{ site.data.about.strengths_title }}</h3>
+
+          <div class="mt-8 space-y-5">
+            {% for strength in site.data.about.strengths %}
+            <div>
+              <h4 class="font-semibold">{{ strength.title }}</h4>
+              <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-7">{{ strength.description }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pb-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="glass rounded-[32px] p-12">
+      <div class="max-w-4xl">
+        <span class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold">{{ site.data.about.philosophy.eyebrow }}</span>
+        <h2 class="text-4xl font-black mt-6">{{ site.data.about.philosophy.title }}</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 mt-16">
+        <div class="space-y-8">
+          {% for item in site.data.about.philosophy.items limit:2 %}
+          <div>
+            <h3 class="font-bold text-xl">{{ item.title }}</h3>
+            <p class="mt-3 text-slate-600 dark:text-slate-400 leading-8">{{ item.description }}</p>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="space-y-8">
+          {% for item in site.data.about.philosophy.items offset:2 %}
+          <div>
+            <h3 class="font-bold text-xl">{{ item.title }}</h3>
+            <p class="mt-3 text-slate-600 dark:text-slate-400 leading-8">{{ item.description }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

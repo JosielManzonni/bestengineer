@@ -1,0 +1,51 @@
+<section class="py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="glass rounded-[32px] p-12">
+      <div class="grid lg:grid-cols-3 gap-10">
+        <div>
+          <span class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold">Engineering Impact</span>
+          <h2 class="text-4xl font-black mt-6">Building technology that creates measurable outcomes.</h2>
+        </div>
+
+        <div class="lg:col-span-2 grid md:grid-cols-2 gap-8">
+          {% for metric in site.data.metrics.impact %}
+          <div class="rounded-none bg-slate-200 dark:bg-slate-900/50 p-6">
+            <h3 class="text-3xl font-black gradient-text">{{ metric.value }}</h3>
+            <p class="mt-3 text-slate-600 dark:text-slate-400">{{ metric.description }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="glass rounded-none p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+      <div>
+        <span class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold">Knowledge Sharing</span>
+        <h2 class="text-3xl font-black mt-4">Writing about engineering, architecture and technology.</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl leading-8">Sharing experiences about backend systems, mobile engineering, architecture decisions, distributed systems and software development.</p>
+      </div>
+
+      <a href="{{ site.data.socials.medium }}" target="_blank" class="inline-flex justify-center rounded-none bg-green-600 px-8 py-4 hover:bg-green-500 transition">Read Articles</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <span class="uppercase tracking-[0.25em] text-green-400 text-sm font-semibold">Contact</span>
+      <h2 class="text-5xl font-black mt-6">Let's build something impactful.</h2>
+      <p class="mt-8 text-xl text-slate-600 dark:text-slate-400 leading-8">I'm interested in challenging engineering problems, architecture discussions, and opportunities where technology can create meaningful impact.</p>
+
+      <div class="hidden lg:flex items-center justify-center gap-4">
+        <a href="{{ site.data.socials.github }}" target="_blank" class="rounded-none border border-white/10 p-3 hover:bg-white/5 transition flex items-center"><i class="si si-github text-xl"></i></a>
+        <a href="{{ site.data.socials.linkedin }}" target="_blank" class="rounded-none bg-green-600 p-3 hover:bg-green-500 transition flex items-center"><i class="si si-linkedin text-xl"></i></a>
+        <a href="{{ site.data.socials.medium }}" target="_blank" class="rounded-none border border-white/10 p-3 hover:bg-white/5 transition flex items-center"><i class="si si-medium text-xl"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
